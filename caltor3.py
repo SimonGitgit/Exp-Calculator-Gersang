@@ -4,8 +4,6 @@ import math
 import os
 import base64
 import sys
-
-from cv2 import QT_PUSH_BUTTON
 import DataFile 
 import ExpTable
 
@@ -27,6 +25,17 @@ class Ui_MainWindow(object):
         Mainwindow.resize(670, 530)
         self.centralwidget = QtWidgets.QWidget(Mainwindow)
         self.centralwidget.setObjectName("centralwidget")
+
+
+
+        self.textEdit_0 = QtWidgets.QLabel(self.centralwidget)
+        self.textEdit_0.setGeometry(QtCore.QRect(580, 10, 70, 15))
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        self.textEdit_0.setFont(font)
+        self.textEdit_0.setObjectName("textEdit_0")
+
+
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(102, 320, 71, 31))
         self.label.setAutoFillBackground(False)
@@ -441,6 +450,7 @@ class Ui_MainWindow(object):
         self.label_13.setText(_translate("Mainwindow", "目標等級"))
         self.label_14.setText(_translate("Mainwindow", "一場需時"))
         self.label_15.setText(_translate("Mainwindow", "完成時間"))
+        self.textEdit_0.setText(_translate("Mainwindow", "大肥豬 @2022"))
 
     def clicked(self):
         self.update()
