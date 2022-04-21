@@ -4,6 +4,8 @@ import math
 import os
 import base64
 import sys
+
+from cv2 import QT_PUSH_BUTTON
 import DataFile 
 import ExpTable
 
@@ -226,8 +228,9 @@ class Ui_MainWindow(object):
         self.label_11.setGeometry(QtCore.QRect(0, 30, 801, 481))
         self.label_11.setText("")
         
-        # write_file(DataFile.picture, "./backgroundimage.png")
-        # self.label_11.setPixmap(QtGui.QPixmap("./backgroundimage.png"))
+        #set background
+        write_file(DataFile.picture, "./backgroundimage.png")
+        self.label_11.setPixmap(QtGui.QPixmap("./backgroundimage.png"))
 
         self.label_11.setAlignment(QtCore.Qt.AlignBottom|QtCore.Qt.AlignJustify)
         self.label_11.setObjectName("label_11")
@@ -365,6 +368,52 @@ class Ui_MainWindow(object):
         self.textEdit_9.setValidator(QIntValidator())
         self.textEdit_10.setValidator(QIntValidator())
 
+        # set style sheet
+        self.pushButton.setStyleSheet(
+            "QPushButton::checked"
+            "{"
+            "background-color: #d98a5f;"
+            "border: 0px solid #743c1e;"
+            "}"  
+                                    )
+        self.pushButton_2.setStyleSheet(
+            "QPushButton::checked"
+            "{"
+            "background-color: rgb(108,202,225);"
+            "border: 1px solid rgb(108,202,225);"
+            "}"  
+                                    )
+        self.pushButton_3.setStyleSheet(
+            "QPushButton::checked"
+            "{"
+            "background-color: rgb(176,206,194);"
+            "border: 1px solid rgb(176,206,194);"
+            "}"  
+                                    )
+        self.pushButton_4.setStyleSheet(
+            "QPushButton::checked"
+            "{"
+            "background-color: rgb(164,156,132);"
+            "border: 1px solid rgb(164,156,132);"
+            "}"  
+                                    )
+        self.pushButton_5.setStyleSheet(
+            "QPushButton::checked"
+            "{"
+            "background-color: rgb(252,229,168);"
+            "border: 1px solid rgb(252,229,168);"
+            "}"  
+                                    )
+        self.pushButton_7.setStyleSheet(
+            "QPushButton::checked"
+            "{"
+            "background-color: rgb(87,87,142);"
+            "border: 1px solid rgb(87,87,142);"
+            "}"  
+                                    )
+
+        
+
         self.retranslateUi(Mainwindow)
         QtCore.QMetaObject.connectSlotsByName(Mainwindow)
 
@@ -418,9 +467,9 @@ class Ui_MainWindow(object):
         exp_required = int(get_exp_diff(self.textEdit_8.text(),self.textEdit_9.text()))
         
         self.textEdit_11.setText("") # clear previous output string
-        self.textEdit_11.append(str(math.ceil(exp_required * int(self.textEdit_10.text()) / int(self.exp_obj.composition()[0]) /3600))+"hr")
-        self.textEdit_11.append(str(math.ceil(exp_required * int(self.textEdit_10.text()) / int(self.exp_obj.composition()[1]) /3600))+"hr")
-        self.textEdit_11.append(str(math.ceil(exp_required * int(self.textEdit_10.text()) / int(self.exp_obj.composition()[2]) /3600))+"hr")
+        self.textEdit_11.append("主角"+str(math.ceil(exp_required * int(self.textEdit_10.text()) / int(self.exp_obj.composition()[0]) /3600))+"hr")
+        self.textEdit_11.append("無鏡"+str(math.ceil(exp_required * int(self.textEdit_10.text()) / int(self.exp_obj.composition()[1]) /3600))+"hr")
+        self.textEdit_11.append("有鏡"+str(math.ceil(exp_required * int(self.textEdit_10.text()) / int(self.exp_obj.composition()[2]) /3600))+"hr")
 
     def hit_pressed(self):
         if (self.main_kill_counter == 0):
@@ -511,5 +560,5 @@ if __name__ == "__main__":
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
     MainWindow.show()
-    #os.remove("./backgroundimage.png")
+    os.remove("./backgroundimage.png")
     sys.exit(app.exec_())
