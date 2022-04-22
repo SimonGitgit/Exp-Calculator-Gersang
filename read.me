@@ -1,0 +1,20 @@
+使用說明
+0. 從左至右進行計算工作
+1. 首先選擇使用了甚麼道具提高經驗值
+2. 輸入伺服器經驗加成(如無加成則輸入100)
+3. 輸入商團技能經驗加成(如無加成則捲動到1)
+4. 輸入怪物的數量和經驗
+舉例 開挑釁符打火蟹 平均拉到一至兩隊
+一隊火蟹有10隻 *(2~3) =25隻
+即怪物經驗輸入210000 怪物數量輸入25
+5. 選擇主角是打手還是兵將作為打手，兵將亦有分為使用壇君鏡子或正常情況
+6. 輸入現時等級、目標等級以及打完一場需要的時間(秒)
+7. 按下任意按鈕更新數據
+
+imported with
+PyQt5 for canvas and UI design
+DataFile generates background image from encoded base64
+ExpTable lookup experience of levels
+
+exported by
+pyinstaller --noconfirm --onefile --windowed --icon "./Gersang/run.ico" --add-data "./ExpCaltor;ExpCaltor/"  "./ExpCaltor/caltor3.py"

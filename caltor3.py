@@ -15,8 +15,6 @@ def write_file(data, route):
         f_Obj.write(get_file)
 
 def get_exp_diff(before, after):
-    #print(after)
-    #print(ExpTable.expCheck[0].get(after))
     return (ExpTable.expCheck[0][str(after)] - ExpTable.expCheck[0][str(before)])
 
 class Ui_MainWindow(object):
@@ -26,15 +24,13 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(Mainwindow)
         self.centralwidget.setObjectName("centralwidget")
 
-
-
+        #author's name
         self.textEdit_0 = QtWidgets.QLabel(self.centralwidget)
-        self.textEdit_0.setGeometry(QtCore.QRect(580, 10, 70, 15))
+        self.textEdit_0.setGeometry(QtCore.QRect(550, 10, 70, 15))
         font = QtGui.QFont()
         font.setPointSize(8)
         self.textEdit_0.setFont(font)
         self.textEdit_0.setObjectName("textEdit_0")
-
 
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(102, 320, 71, 31))
@@ -136,7 +132,7 @@ class Ui_MainWindow(object):
         self.label_9.setGeometry(QtCore.QRect(250, 410, 71, 35))
         self.label_9.setObjectName("label_9")
         
-        
+        #pushbutton
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setGeometry(QtCore.QRect(10, 320, 86, 31))
         font = QtGui.QFont()
@@ -421,8 +417,6 @@ class Ui_MainWindow(object):
             "}"  
                                     )
 
-        
-
         self.retranslateUi(Mainwindow)
         QtCore.QMetaObject.connectSlotsByName(Mainwindow)
 
@@ -455,6 +449,7 @@ class Ui_MainWindow(object):
     def clicked(self):
         self.update()
 
+    #update calculation
     def update(self):
         self.exp_obj = Experience(int((self.textEdit.text())), #exp_each
                                 int((self.textEdit_2.text())), #no_of_monster
@@ -481,6 +476,7 @@ class Ui_MainWindow(object):
         self.textEdit_11.append("無鏡"+str(math.ceil(exp_required * int(self.textEdit_10.text()) / int(self.exp_obj.composition()[1]) /3600))+"hr")
         self.textEdit_11.append("有鏡"+str(math.ceil(exp_required * int(self.textEdit_10.text()) / int(self.exp_obj.composition()[2]) /3600))+"hr")
 
+    #changed whom kill
     def hit_pressed(self):
         if (self.main_kill_counter == 0):
             self.main_kill_counter = 1
@@ -493,6 +489,7 @@ class Ui_MainWindow(object):
             self.pushButton_6.setText("主角打手")
         self.update()
 
+#Experience calculation algorithm
 class Experience:
     def __init__(self, exp_each, 
                         no_of_monster, 

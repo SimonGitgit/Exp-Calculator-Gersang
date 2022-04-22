@@ -1,1 +1,0 @@
-pyinstaller --noconfirm --onefile --windowed --icon "C:/mangot5/Gersang/run.ico" --add-data "E:/GitHub/ExpCaltor;ExpCaltor/"  "E:/GitHub/ExpCaltor/caltor3.py"
