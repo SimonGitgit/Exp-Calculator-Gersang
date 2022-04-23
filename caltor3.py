@@ -61,75 +61,92 @@ class Ui_MainWindow(object):
         self.label_4.setAlignment(QtCore.Qt.AlignCenter)
         self.label_4.setObjectName("label_4")
         self.textEdit = QtWidgets.QLineEdit(self.centralwidget)
-        self.textEdit.setGeometry(QtCore.QRect(170, 320, 104, 35))
+        self.textEdit.setGeometry(QtCore.QRect(170, 320, 60, 35))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.textEdit.setFont(font)
         self.textEdit.setObjectName("textEdit")
         self.spinBox = QtWidgets.QSpinBox(self.centralwidget)
-        self.spinBox.setGeometry(QtCore.QRect(170, 410, 51, 35))
+        self.spinBox.setGeometry(QtCore.QRect(170, 410, 48, 30))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.spinBox.setFont(font)
-        self.spinBox.setMinimum(1)
+        self.spinBox.setMinimum(0)
         self.spinBox.setMaximum(5)
-        self.spinBox.setSingleStep(2)
+        self.spinBox.setSingleStep(1)
         self.spinBox.setObjectName("spinBox")
         self.textEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
-        self.textEdit_2.setGeometry(QtCore.QRect(170, 350, 104, 35))
+        self.textEdit_2.setGeometry(QtCore.QRect(170, 350, 60, 35))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.textEdit_2.setFont(font)
         self.textEdit_2.setObjectName("textEdit_2")
         self.textEdit_3 = QtWidgets.QLineEdit(self.centralwidget)
-        self.textEdit_3.setGeometry(QtCore.QRect(170, 380, 104, 35))
+        self.textEdit_3.setGeometry(QtCore.QRect(170, 380, 60, 35))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.textEdit_3.setFont(font)
         self.textEdit_3.setObjectName("textEdit_3")
         
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
-        self.label_5.setGeometry(QtCore.QRect(282, 320, 71, 31))
+        self.label_5.setGeometry(QtCore.QRect(232, 320, 71, 31))
         self.label_5.setAutoFillBackground(False)
         self.label_5.setStyleSheet("background-color:  rgba(255, 255, 255,150);")
         self.label_5.setAlignment(QtCore.Qt.AlignCenter)
         self.label_5.setWordWrap(False)
         self.label_5.setObjectName("label_5")
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
-        self.label_6.setGeometry(QtCore.QRect(282, 350, 71, 31))
+        self.label_6.setGeometry(QtCore.QRect(232, 350, 71, 31))
         self.label_6.setAutoFillBackground(False)
         self.label_6.setStyleSheet("background-color:  rgba(255, 255, 255,150);")
         self.label_6.setAlignment(QtCore.Qt.AlignCenter)
         self.label_6.setObjectName("label_6")
         self.label_7 = QtWidgets.QLabel(self.centralwidget)
-        self.label_7.setGeometry(QtCore.QRect(282, 410, 71, 31))
+        self.label_7.setGeometry(QtCore.QRect(232, 410, 71, 31))
         self.label_7.setAutoFillBackground(False)
         self.label_7.setStyleSheet("background-color:  rgba(255, 255, 255,150);")
         self.label_7.setAlignment(QtCore.Qt.AlignCenter)
         self.label_7.setObjectName("label_7")
+        self.label_10 = QtWidgets.QLabel(self.centralwidget)
+        self.label_10.setGeometry(QtCore.QRect(232, 380, 71, 31))
+        self.label_10.setAutoFillBackground(False)
+        self.label_10.setStyleSheet("background-color:  rgba(255, 255, 255,150);")
+        self.label_10.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_10.setObjectName("label_10")
+
         self.textEdit_4 = QtWidgets.QLineEdit(self.centralwidget)
-        self.textEdit_4.setGeometry(QtCore.QRect(350, 320, 104, 35))
+        self.textEdit_4.setGeometry(QtCore.QRect(300, 320, 84, 35))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.textEdit_4.setFont(font)
         self.textEdit_4.setObjectName("textEdit_4")
         self.textEdit_5 = QtWidgets.QLineEdit(self.centralwidget)
-        self.textEdit_5.setGeometry(QtCore.QRect(350, 350, 104, 35))
+        self.textEdit_5.setGeometry(QtCore.QRect(300, 350, 84, 35))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.textEdit_5.setFont(font)
         self.textEdit_5.setObjectName("textEdit_5")
         self.textEdit_6 = QtWidgets.QLineEdit(self.centralwidget)
-        self.textEdit_6.setGeometry(QtCore.QRect(350, 380, 104, 35))
+        self.textEdit_6.setGeometry(QtCore.QRect(300, 380, 84, 35))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.textEdit_6.setFont(font)
         self.textEdit_6.setObjectName("textEdit_6")
+        self.textEdit_7 = QtWidgets.QLineEdit(self.centralwidget)
+        self.textEdit_7.setGeometry(QtCore.QRect(300, 410, 84, 35))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.textEdit_7.setFont(font)
+        self.textEdit_7.setObjectName("textEdit_7")
+
+
+        
+
         self.label_8 = QtWidgets.QLabel(self.centralwidget)
-        self.label_8.setGeometry(QtCore.QRect(250, 380, 71, 35))
+        self.label_8.setGeometry(QtCore.QRect(220, 380, 71, 35))
         self.label_8.setObjectName("label_8")
         self.label_9 = QtWidgets.QLabel(self.centralwidget)
-        self.label_9.setGeometry(QtCore.QRect(250, 410, 71, 35))
+        self.label_9.setGeometry(QtCore.QRect(220, 410, 71, 35))
         self.label_9.setObjectName("label_9")
         
         #pushbutton
@@ -158,7 +175,7 @@ class Ui_MainWindow(object):
         self.pushButton_2.setObjectName("pushButton_2")
         
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(10, 380, 86, 31))
+        self.pushButton_3.setGeometry(QtCore.QRect(385, 320, 40, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.pushButton_3.setFont(font)
@@ -168,6 +185,20 @@ class Ui_MainWindow(object):
         self.pushButton_3.setCheckable(True)
         self.pushButton_3.setChecked(False)
         self.pushButton_3.setObjectName("pushButton_3")
+
+        self.pushButton_3_1 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_3_1.setGeometry(QtCore.QRect(385, 380, 40, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.pushButton_3_1.setFont(font)
+        self.pushButton_3_1.setMouseTracking(True)
+        self.pushButton_3_1.setAutoFillBackground(False)
+        self.pushButton_3_1.setIconSize(QtCore.QSize(16, 20))
+        self.pushButton_3_1.setCheckable(True)
+        self.pushButton_3_1.setChecked(False)
+        self.pushButton_3_1.setObjectName("pushButton_3_1")
+
+
         
         self.pushButton_4 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_4.setGeometry(QtCore.QRect(10, 410, 86, 31))
@@ -194,7 +225,7 @@ class Ui_MainWindow(object):
         self.pushButton_5.setObjectName("pushButton_5")
 
         self.pushButton_6 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_6.setGeometry(QtCore.QRect(350, 470, 86, 31))
+        self.pushButton_6.setGeometry(QtCore.QRect(425, 320, 40, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.pushButton_6.setFont(font)
@@ -217,18 +248,8 @@ class Ui_MainWindow(object):
         self.pushButton_7.setChecked(False)
         self.pushButton_7.setObjectName("pushButton_7")
         
-        self.label_10 = QtWidgets.QLabel(self.centralwidget)
-        self.label_10.setGeometry(QtCore.QRect(282, 380, 71, 31))
-        self.label_10.setAutoFillBackground(False)
-        self.label_10.setStyleSheet("background-color:  rgba(255, 255, 255,150);")
-        self.label_10.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_10.setObjectName("label_10")
-        self.textEdit_7 = QtWidgets.QLineEdit(self.centralwidget)
-        self.textEdit_7.setGeometry(QtCore.QRect(350, 410, 104, 35))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.textEdit_7.setFont(font)
-        self.textEdit_7.setObjectName("textEdit_7")
+        
+        
         self.label_11 = QtWidgets.QLabel(self.centralwidget)
         self.label_11.setGeometry(QtCore.QRect(0, 30, 801, 481))
         self.label_11.setText("")
@@ -326,6 +347,7 @@ class Ui_MainWindow(object):
         self.pushButton.raise_()
         self.pushButton_2.raise_()
         self.pushButton_3.raise_()
+        self.pushButton_3_1.raise_()
         self.pushButton_4.raise_()
         self.pushButton_5.raise_()
         self.pushButton_6.raise_()
@@ -356,6 +378,7 @@ class Ui_MainWindow(object):
         self.pushButton.clicked.connect(self.clicked)
         self.pushButton_2.clicked.connect(self.clicked)
         self.pushButton_3.clicked.connect(self.clicked)
+        self.pushButton_3_1.clicked.connect(self.clicked)
         self.pushButton_4.clicked.connect(self.clicked)
         self.pushButton_5.clicked.connect(self.clicked)
         self.pushButton_7.clicked.connect(self.clicked)
@@ -385,35 +408,43 @@ class Ui_MainWindow(object):
             "QPushButton::checked"
             "{"
             "background-color: rgb(108,202,225);"
-            "border: 1px solid rgb(108,202,225);"
+            "border: 0px solid rgb(108,202,225);"
             "}"  
                                     )
         self.pushButton_3.setStyleSheet(
             "QPushButton::checked"
             "{"
             "background-color: rgb(176,206,194);"
-            "border: 1px solid rgb(176,206,194);"
+            "border: 0px solid rgb(176,206,194);"
             "}"  
                                     )
+        self.pushButton_3_1.setStyleSheet(
+            "QPushButton::checked"
+            "{"
+            "background-color: rgb(176,206,194);"
+            "border: 0px solid rgb(176,206,194);"
+            "}"  
+                                    )
+
         self.pushButton_4.setStyleSheet(
             "QPushButton::checked"
             "{"
             "background-color: rgb(164,156,132);"
-            "border: 1px solid rgb(164,156,132);"
+            "border: 0px solid rgb(164,156,132);"
             "}"  
                                     )
         self.pushButton_5.setStyleSheet(
             "QPushButton::checked"
             "{"
             "background-color: rgb(252,229,168);"
-            "border: 1px solid rgb(252,229,168);"
+            "border: 0px solid rgb(252,229,168);"
             "}"  
                                     )
         self.pushButton_7.setStyleSheet(
             "QPushButton::checked"
             "{"
             "background-color: rgb(87,87,142);"
-            "border: 1px solid rgb(87,87,142);"
+            "border: 0px solid rgb(87,87,142);"
             "}"  
                                     )
 
@@ -427,7 +458,7 @@ class Ui_MainWindow(object):
         self.label_2.setText(_translate("Mainwindow", "怪物總數"))
         self.label_3.setText(_translate("Mainwindow", "倍經活動"))
         self.label_4.setText(_translate("Mainwindow", "商團技能"))
-        self.pushButton_6.setText(_translate("Mainwindow", "主角打手"))
+        self.pushButton_6.setText(_translate("Mainwindow", "打手"))
         self.label_5.setText(_translate("Mainwindow", "主角經驗"))
         self.label_6.setText(_translate("Mainwindow", "兵將經驗"))
         self.label_7.setText(_translate("Mainwindow", "總經檢查"))
@@ -436,7 +467,8 @@ class Ui_MainWindow(object):
         self.pushButton.setText(_translate("Mainwindow", "七福御膳"))
         self.pushButton_4.setText(_translate("Mainwindow", "據點佔領"))
         self.pushButton_2.setText(_translate("Mainwindow", "日積月累"))
-        self.pushButton_3.setText(_translate("Mainwindow", "變身壇鏡"))
+        self.pushButton_3.setText(_translate("Mainwindow", "變身"))
+        self.pushButton_3_1.setText(_translate("Mainwindow", "壇鏡"))
         self.pushButton_5.setText(_translate("Mainwindow", "商團宴會"))
         self.pushButton_7.setText(_translate("Mainwindow", "翅膀裝飾"))
         self.label_10.setText(_translate("Mainwindow", "壇鏡兵將"))
@@ -445,6 +477,7 @@ class Ui_MainWindow(object):
         self.label_14.setText(_translate("Mainwindow", "一場需時"))
         self.label_15.setText(_translate("Mainwindow", "完成時間"))
         self.textEdit_0.setText(_translate("Mainwindow", "大肥豬 @2022"))
+        
 
     def clicked(self):
         self.update()
@@ -455,7 +488,8 @@ class Ui_MainWindow(object):
                                 int((self.textEdit_2.text())), #no_of_monster
                                 self.pushButton.isChecked(), #七福御膳
                                 self.pushButton_2.isChecked(), #日積月累
-                                self.pushButton_3.isChecked(), #變身壇鏡
+                                self.pushButton_3.isChecked(), #變身
+                                self.pushButton_3_1.isChecked(),#壇鏡
                                 self.pushButton_4.isChecked(), #據點佔領
                                 self.pushButton_5.isChecked(), #商團宴會 
                                 self.main_kill_counter, #主角打手
@@ -480,13 +514,16 @@ class Ui_MainWindow(object):
     def hit_pressed(self):
         if (self.main_kill_counter == 0):
             self.main_kill_counter = 1
-            self.pushButton_6.setText("無鏡打手")
+            self.pushButton_6.setText("打手")
+            self.pushButton_6.setGeometry(425, 350, 40, 31)
         elif(self.main_kill_counter == 1):
             self.main_kill_counter = 2
-            self.pushButton_6.setText("壇鏡打手")
+            self.pushButton_6.setText("打手")
+            self.pushButton_6.setGeometry(425, 380, 40, 31)
         elif(self.main_kill_counter == 2):
             self.main_kill_counter = 0
-            self.pushButton_6.setText("主角打手")
+            self.pushButton_6.setText("打手")
+            self.pushButton_6.setGeometry(425, 320, 40, 31)
         self.update()
 
 #Experience calculation algorithm
@@ -495,7 +532,8 @@ class Experience:
                         no_of_monster, 
                         seven, 
                         collect, 
-                        mirror, 
+                        changed,
+                        mirror,
                         victory, 
                         banquet, 
                         mainkill, 
@@ -508,6 +546,7 @@ class Experience:
 
         self._seven = seven
         self._collect = collect
+        self._changed = changed
         self._mirror = mirror
         self._victory = victory
         self._wing = wing
@@ -525,7 +564,8 @@ class Experience:
     def composition(self):
         self.proportion_basic = math.floor(self.basic_experience/10) #基礎經驗
         self.proportion_collect =  math.floor(self.basic_experience/10) if (self._collect) else 0 #日積月累
-        self.proportion_mirror =  math.floor(self.basic_experience/10) if (self._mirror) else 0 #變身壇鏡
+        self.proportion_changed =  math.floor(self.basic_experience/10) if (self._changed) else 0 #變身
+        self.proportion_mirror =  math.floor(self.basic_experience/10) if (self._mirror) else 0 #壇鏡
         self.proportion_victory =  math.floor(self.basic_experience/20) if (self._victory) else 0 #據點佔領
         self.proportion_wing =  math.floor(self.basic_experience/20) if (self._wing) else 0 #翅膀裝飾
         self.proportion_banquet =  math.floor(self.basic_experience * 0.35) if (self._banquet) else 0 #商團宴會
@@ -534,31 +574,29 @@ class Experience:
 
         # print(self.proportion_basic) 
         # print(self.proportion_collect)
+        # print(self.proportion_changed)
         # print(self.proportion_mirror)
         # print(self.proportion_victory)
         # print(self.proportion_wing )
         # print(self.proportion_banquet)
         # print(self.proportion_skill )
         # print(self.proportion_server)
+        main_char_exp = self.proportion_basic + self.proportion_collect + self.proportion_changed + self.proportion_victory + self.proportion_wing + self.proportion_banquet + self.proportion_skill
+        soldier_exp = self.proportion_basic + self.proportion_collect + self.proportion_banquet 
+        soldier_mirror = self.proportion_basic + self.proportion_collect + self.proportion_mirror + self.proportion_banquet 
+        
 
         if (self._mainkill == 0):
-            main_char_exp = self.proportion_basic + self.proportion_collect + self.proportion_mirror + self.proportion_victory + self.proportion_wing + self.proportion_banquet + self.proportion_skill + self.proportion_server
-            soldier_exp = self.proportion_basic + self.proportion_collect + self.proportion_banquet 
-            soldier_mirror = self.proportion_basic + self.proportion_collect + self.proportion_mirror + self.proportion_banquet 
-            check_sum = main_char_exp + 10 * soldier_exp + soldier_mirror
-
+            main_char_exp += self.proportion_server
+            check_sum = main_char_exp + 10 * (soldier_exp) + soldier_mirror 
         elif(self._mainkill == 1):
-            main_char_exp = self.proportion_basic + self.proportion_collect + self.proportion_mirror + self.proportion_victory + self.proportion_wing + self.proportion_banquet + self.proportion_skill 
-            soldier_exp = self.proportion_basic + self.proportion_collect + self.proportion_banquet + self.proportion_server
-            soldier_mirror = self.proportion_basic + self.proportion_collect + self.proportion_mirror + self.proportion_banquet 
-            check_sum = main_char_exp + 10 * (soldier_exp - self.proportion_server) + self.proportion_server + soldier_mirror 
-        
+            soldier_exp += self.proportion_server
+            check_sum = main_char_exp + 10 * (soldier_exp-self.proportion_server) + soldier_mirror + self.proportion_server
         elif(self._mainkill == 2):
-            main_char_exp = self.proportion_basic + self.proportion_collect + self.proportion_mirror + self.proportion_victory + self.proportion_wing + self.proportion_banquet + self.proportion_skill 
-            soldier_exp = self.proportion_basic + self.proportion_collect + self.proportion_banquet 
-            soldier_mirror = self.proportion_basic + self.proportion_collect + self.proportion_mirror + self.proportion_banquet + self.proportion_server
-            check_sum = main_char_exp + 10 * soldier_exp + soldier_mirror
-
+            soldier_mirror +=self.proportion_server
+            check_sum = main_char_exp + 10 * (soldier_exp) + soldier_mirror 
+            
+        
         return main_char_exp, soldier_exp, soldier_mirror, check_sum
 
 if __name__ == "__main__":
