@@ -568,7 +568,7 @@ class Experience:
         self.proportion_mirror =  math.floor(self.basic_experience/10) if (self._mirror) else 0 #壇鏡
         self.proportion_victory =  math.floor(self.basic_experience/20) if (self._victory) else 0 #據點佔領
         self.proportion_wing =  math.floor(self.basic_experience/20) if (self._wing) else 0 #翅膀裝飾
-        self.proportion_banquet =  math.floor(self.basic_experience * 0.35) if (self._banquet) else 0 #商團宴會
+        self.proportion_banquet =  math.floor(self.basic_experience/10) if (self._banquet) else 0 #商團宴會
         self.proportion_skill = math.floor(self.basic_experience * self._skill / 100) #商團技能
         self.proportion_server = math.floor(self.basic_experience * self._server / 100) #活動倍經
 
