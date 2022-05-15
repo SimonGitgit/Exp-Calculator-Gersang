@@ -542,8 +542,6 @@ class Experience:
         self.basic_experience = 0
         self._number = no_of_monster
         self._experience = exp_each
-
-
         self._seven = seven
         self._collect = collect
         self._changed = changed
@@ -554,14 +552,7 @@ class Experience:
         self._banquet = banquet
         self._skill = team #%
         self._server = fest # %
-        
-    #wrong method by 1.5x
-    # def basicExp(self):
-    #     if (self._seven):
-    #         self.basic_experience = int(1.0 * self._number * self._experience) 
-    #     else:
-    #         self.basic_experience = int(1.0 * self._number * self._experience)
-    
+
     def composition(self):
         self.basic_experience = int(1.0 * self._number * self._experience) 
         self.proportion_basic = math.floor(self.basic_experience * 0.1) if not (self._seven) else math.floor(self.basic_experience * 0.1 * 1.5)#基礎經驗
@@ -578,25 +569,6 @@ class Experience:
         self.proportion_skill = math.floor(self.basic_experience* (self._skill * (self._server/100 + self._seven*0.5))/100) #團技0/0.01/0.03/0.05
         self.proportion_kill = math.floor(self.basic_experience * (self._server/100 + self._seven*0.5))
         
-        # 舊計算方法
-        # self.proportion_collect =  math.floor(self.basic_experience/10) if (self._collect) else 0 #日積月累
-        # self.proportion_changed =  math.floor(self.basic_experience/10) if (self._changed) else 0 #變身
-        # self.proportion_mirror =  math.floor(self.basic_experience/10) if (self._mirror) else 0 #壇鏡
-        # self.proportion_victory =  math.floor(self.basic_experience/20) if (self._victory) else 0 #據點佔領
-        # self.proportion_wing =  math.floor(self.basic_experience/20) if (self._wing) else 0 #翅膀裝飾
-        # self.proportion_banquet =  math.floor(self.basic_experience/10) if (self._banquet) else 0 #商團宴會
-        # self.proportion_skill = math.floor(self.basic_experience * self._skill / 100) #商團技能
-        #self.proportion_server = math.floor(self.basic_experience * self._server / 100) #活動倍經
-
-        # print(self.proportion_basic) 
-        # print(self.proportion_collect)
-        # print(self.proportion_changed)
-        # print(self.proportion_mirror)
-        # print(self.proportion_victory)
-        # print(self.proportion_wing )
-        # print(self.proportion_banquet)
-        # print(self.proportion_skill )
-        # print(self.proportion_server)
         main_char_exp = self.proportion_basic + self.proportion_collect + self.proportion_changed + self.proportion_victory + self.proportion_wing + self.proportion_banquet + self.proportion_skill
         soldier_exp = self.proportion_basic + self.proportion_collect + self.proportion_banquet 
         soldier_mirror = self.proportion_basic + self.proportion_collect + self.proportion_mirror + self.proportion_banquet 
