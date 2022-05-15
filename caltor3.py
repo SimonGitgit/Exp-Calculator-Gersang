@@ -497,7 +497,6 @@ class Ui_MainWindow(object):
                                 int((self.textEdit_3.text())), #倍經
                                 int(self.spinBox.value()) #商團技能
                                 )    
-        self.exp_obj.basicExp()
         
         self.textEdit_4.setText(str(self.exp_obj.composition()[0]))
         self.textEdit_5.setText(str(self.exp_obj.composition()[1]))
@@ -544,6 +543,7 @@ class Experience:
         self._number = no_of_monster
         self._experience = exp_each
 
+
         self._seven = seven
         self._collect = collect
         self._changed = changed
@@ -554,23 +554,39 @@ class Experience:
         self._banquet = banquet
         self._skill = team #%
         self._server = fest # %
-
-    def basicExp(self):
-        if (self._seven):
-            self.basic_experience = int(1.5 * self._number * self._experience)
-        else:
-            self.basic_experience = int(1 * self._number * self._experience)
+        
+    #wrong method by 1.5x
+    # def basicExp(self):
+    #     if (self._seven):
+    #         self.basic_experience = int(1.0 * self._number * self._experience) 
+    #     else:
+    #         self.basic_experience = int(1.0 * self._number * self._experience)
     
     def composition(self):
-        self.proportion_basic = math.floor(self.basic_experience/10) #基礎經驗
-        self.proportion_collect =  math.floor(self.basic_experience/10) if (self._collect) else 0 #日積月累
-        self.proportion_changed =  math.floor(self.basic_experience/10) if (self._changed) else 0 #變身
-        self.proportion_mirror =  math.floor(self.basic_experience/10) if (self._mirror) else 0 #壇鏡
-        self.proportion_victory =  math.floor(self.basic_experience/20) if (self._victory) else 0 #據點佔領
-        self.proportion_wing =  math.floor(self.basic_experience/20) if (self._wing) else 0 #翅膀裝飾
-        self.proportion_banquet =  math.floor(self.basic_experience/10) if (self._banquet) else 0 #商團宴會
-        self.proportion_skill = math.floor(self.basic_experience * self._skill / 100) #商團技能
-        self.proportion_server = math.floor(self.basic_experience * self._server / 100) #活動倍經
+        self.basic_experience = int(1.0 * self._number * self._experience) 
+        self.proportion_basic = math.floor(self.basic_experience * 0.1) if not (self._seven) else math.floor(self.basic_experience * 0.1 * 1.5)#基礎經驗
+        self.proportion_server = self._server*0.01 #活動倍經
+        self.proportion_seven = self._seven    #七福 所有多0.5倍
+        self.proportion_collect = math.floor((self.basic_experience*0.1 * (self._server/100 + self._seven*0.5))*self._collect) #日積0.1
+
+        self.proportion_changed =  math.floor((self.basic_experience*0.1 * (self._server/100 + self._seven*0.5))*self._changed) #變身0.1
+
+        self.proportion_mirror =  math.floor((self.basic_experience*0.05 *self._mirror)) if not (self._seven) else math.floor(self.basic_experience*0.15 *self._mirror) #鏡0.1 鏡吃七不吃倍%
+        self.proportion_victory =  math.floor((self.basic_experience*0.05 * (self._server/100 + self._seven*0.5))*self._victory) #據點0.05
+        self.proportion_wing = math.floor((self.basic_experience*0.05 * (self._server/100 + self._seven*0.5))*self._wing) #翼0.05
+        self.proportion_banquet = math.floor((self.basic_experience*0.1 * (self._server/100 + self._seven*0.5))*self._banquet) #宴0.1
+        self.proportion_skill = math.floor(self.basic_experience* (self._skill * (self._server/100 + self._seven*0.5))/100) #團技0/0.01/0.03/0.05
+        self.proportion_kill = math.floor(self.basic_experience * (self._server/100 + self._seven*0.5))
+        
+        # 舊計算方法
+        # self.proportion_collect =  math.floor(self.basic_experience/10) if (self._collect) else 0 #日積月累
+        # self.proportion_changed =  math.floor(self.basic_experience/10) if (self._changed) else 0 #變身
+        # self.proportion_mirror =  math.floor(self.basic_experience/10) if (self._mirror) else 0 #壇鏡
+        # self.proportion_victory =  math.floor(self.basic_experience/20) if (self._victory) else 0 #據點佔領
+        # self.proportion_wing =  math.floor(self.basic_experience/20) if (self._wing) else 0 #翅膀裝飾
+        # self.proportion_banquet =  math.floor(self.basic_experience/10) if (self._banquet) else 0 #商團宴會
+        # self.proportion_skill = math.floor(self.basic_experience * self._skill / 100) #商團技能
+        #self.proportion_server = math.floor(self.basic_experience * self._server / 100) #活動倍經
 
         # print(self.proportion_basic) 
         # print(self.proportion_collect)
@@ -585,18 +601,16 @@ class Experience:
         soldier_exp = self.proportion_basic + self.proportion_collect + self.proportion_banquet 
         soldier_mirror = self.proportion_basic + self.proportion_collect + self.proportion_mirror + self.proportion_banquet 
         
-
         if (self._mainkill == 0):
-            main_char_exp += self.proportion_server
+            main_char_exp += self.proportion_kill
             check_sum = main_char_exp + 10 * (soldier_exp) + soldier_mirror 
         elif(self._mainkill == 1):
-            soldier_exp += self.proportion_server
-            check_sum = main_char_exp + 10 * (soldier_exp-self.proportion_server) + soldier_mirror + self.proportion_server
+            soldier_exp += self.proportion_kill
+            check_sum = main_char_exp + 10 * (soldier_exp-self.proportion_kill) + soldier_mirror + self.proportion_kill
         elif(self._mainkill == 2):
-            soldier_mirror +=self.proportion_server
+            soldier_mirror +=self.proportion_kill
             check_sum = main_char_exp + 10 * (soldier_exp) + soldier_mirror 
             
-        
         return main_char_exp, soldier_exp, soldier_mirror, check_sum
 
 if __name__ == "__main__":
