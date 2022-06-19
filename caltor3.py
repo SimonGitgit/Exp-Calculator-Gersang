@@ -2,9 +2,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QIntValidator
 import math
 import os
-import base64
+import base64 
 import sys
-import DataFile 
+import DataFile
 import ExpTable
 
 
@@ -26,9 +26,9 @@ class Ui_MainWindow(object):
 
         #author's name
         self.textEdit_0 = QtWidgets.QLabel(self.centralwidget)
-        self.textEdit_0.setGeometry(QtCore.QRect(550, 10, 70, 15))
+        self.textEdit_0.setGeometry(QtCore.QRect(300, 480, 100, 15))
         font = QtGui.QFont()
-        font.setPointSize(8)
+        font.setPointSize(10)
         self.textEdit_0.setFont(font)
         self.textEdit_0.setObjectName("textEdit_0")
 

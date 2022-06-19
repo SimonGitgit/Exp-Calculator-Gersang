@@ -18,6 +18,14 @@
    "value": false
   },
   {
+   "optionDest": "icon_file",
+   "value": "E:/GitHub/Exp-Calculator-Gersang/run.ico"
+  },
+  {
+   "optionDest": "name",
+   "value": "\u5de8\u5546\u7d93\u9a57\u503c\u8a08\u7b97\u6a5f"
+  },
+  {
    "optionDest": "ascii",
    "value": false
   },
